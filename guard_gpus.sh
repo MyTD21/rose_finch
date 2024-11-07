@@ -1,1 +1,1 @@
-nohup python ./gpu_guard.py &
+nohup python /rose_finch/gpu_guard.py &

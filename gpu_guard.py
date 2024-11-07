@@ -15,16 +15,13 @@ def get_gpu_count():
     gpu_list = output.strip().split('\n')
     return len(gpu_list)
 
-
 def gpu_occpy():
     gpu_count = get_gpu_count()
-#    print(f"Number of GPUs: {gpu_count}")
-#    print("Running on GPU:", torch.cuda.get_device_name())
 
     gpu_inputs = []
     for i in range(0, gpu_count):
         device = torch.device("cuda:" + str(i))
-        matrix_size = 350
+        matrix_size = 2100 
         a = torch.rand(matrix_size, matrix_size, device=device)
         b = torch.rand(matrix_size, matrix_size, device=device)
 

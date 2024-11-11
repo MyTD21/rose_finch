@@ -62,15 +62,15 @@ def main():
     logging.basicConfig(level=logging.DEBUG,  # 设置日志级别
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',  # 设置日志格式
                     datefmt='%Y-%m-%d %H:%M:%S',  # 时间格式
-                    filename='gpu_guard.log',  # 输出到文件
+                    filename='log_gpu_guard',  # 输出到文件
                     filemode='w')  # 文件模式，'w' 表示写模式，每次运行都会覆盖文件
 
     while True:
         if is_gpu_busy() == True:
-            time.sleep(100)
+            time.sleep(600)
         else:
             jobs()
-            time.sleep(30)
+            time.sleep(300)
 
 if __name__ == "__main__":
     main()

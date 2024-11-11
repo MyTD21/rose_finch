@@ -1,1 +1,0 @@
-nohup python /rose_finch/gpu_guard.py &
